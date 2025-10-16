@@ -27,6 +27,11 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+.search-container {
+  width: 30vw;
+  min-width: 250px;
+}
+
 .hero {
     background: url('images/city.jpg');
     background-size: cover;
@@ -148,10 +153,6 @@
     display: none;
   }
 
-  .navbar .container:nth-child(2) {
-    margin: 0 4vw; /* adds left/right spacing only on mobile */
-  }
-
   .navbar .container img {
     height: 90px;
     width: 90px;
@@ -159,6 +160,11 @@
     margin-top: 0;
     margin-left: 1.5vw;
     margin-right: 1.5vw;
+  }
+
+  .search-container {
+    width: 90% !important; /* expand to 90% on mobile */
+    min-width: unset;
   }
 
   .navbar .container {
@@ -195,10 +201,6 @@
 
   .navbar input {
     width: 85% !important;
-  }
-
-  .navbar button {
-    width: 15% !important;
   }
 }
 
