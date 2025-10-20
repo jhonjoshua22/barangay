@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News & Updates | Barangay Kalawaan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="news.css" rel="stylesheet">
+</head>
+<body style="background:white">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top" style="background: white; height: 80px">
+    <div class="container-fluid">
+      <!-- Logo + Name -->
+      <div class="d-flex align-items-center">
+        <img src="images/logo.jpg" alt="Logo" class="img-fluid" style="height: 70px; width: 70px; border-radius: 50%; margin-right: 10px;">
+        <h1 class="fw-bold m-0">Barangay Kalawaan</h1>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+        <!-- Search -->
+        <div class="mx-auto my-2 search-container">
+          <form action="" class="d-flex position-relative">
+            <input type="text" placeholder="Search" class="form-control" style="border-radius: 20px 0 0 20px;">
+            <button class="btn text-white" style="background: black; border-radius: 0 20px 20px 0;">Search</button>
+          </form>
+        </div>
+
+        <!-- Nav Links -->
+        <div class="navlink d-flex flex-column flex-lg-row align-items-center">
+          <a href="index.html" class="nav-link fw-bold text-black">Home</a>
+          <a href="about.html" class="nav-link fw-bold text-black">About</a>
+          <a href="services.html" class="nav-link fw-bold text-black">Services</a>
+          <a href="news.html" class="nav-link fw-bold text-black">News</a>
+          <a href="#" class="nav-link fw-bold text-black" data-bs-target="#contactModal" data-bs-toggle="modal">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid shadow news" style="z-index: 10; height: 25px; background: rgb(34, 123, 206); position: sticky; top: 80px"></div>
+
+  <!-- News Layout -->
+  <div class="news-page">
+    <!-- LEFT SIDE -->
+    <div class="news-sidebar p-5 border-end">
+      <h4 class="fw-bold mb-3">Latest News & Updates</h4>
+
+      <!-- Year Selector -->
+      <div class="mb-3">
+        <label for="yearSelect" class="form-label fw-semibold">Select Year</label>
+        <select class="form-select" id="yearSelect">
+          <option>2025</option>
+          <option>2024</option>
+          <option>2023</option>
+        </select>
+      </div>
+
+      <!-- Accordion -->
+      <div class="accordion" id="monthAccordion">
+        <!-- January -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#januaryCollapse">
+              January
+            </button>
+          </h2>
+          <div id="januaryCollapse" class="accordion-collapse collapse show" data-bs-parent="#monthAccordion">
+            <div class="accordion-body">
+              <ul class="list-unstyled mb-0">
+                <li><a href="#" class="news-item" data-title="Clean-Up Drive Along Kalawaan River" data-date="01/12/25" data-content="Barangay residents gathered for a community clean-up drive along Kalawaan River. Over 200 volunteers participated, collecting nearly 500kg of waste.">Clean-Up Drive Along Kalawaan River (01/12/25)</a></li>
+                <li><a href="#" class="news-item" data-title="New Health Station Opens" data-date="01/25/25" data-content="The Barangay inaugurated a new Health Station to serve the growing population. It aims to provide faster medical attention and vaccination services.">New Health Station Opens (01/25/25)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- February -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#februaryCollapse">
+              February
+            </button>
+          </h2>
+          <div id="februaryCollapse" class="accordion-collapse collapse" data-bs-parent="#monthAccordion">
+            <div class="accordion-body">
+              <ul class="list-unstyled mb-0">
+                <li><a href="#" class="news-item" data-title="Barangay Sports Fest 2025" data-date="02/10/25" data-content="The annual sports festival kicked off with basketball, volleyball, and chess tournaments to promote camaraderie and active lifestyles.">Barangay Sports Fest 2025 (02/10/25)</a></li>
+                <li><a href="#" class="news-item" data-title="Fire Safety Awareness Seminar" data-date="02/18/25" data-content="Residents attended a fire safety seminar conducted by Pasig Fire Department, focusing on prevention tips and emergency response training.">Fire Safety Awareness Seminar (02/18/25)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more months here -->
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="news-content p-5" id="newsContent">
+      <p>Select a news title on the left to read the full story.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-white" style="background: rgb(34, 123, 206); padding: 40px 0;">
+        <div class="container">
+            <div class="row text-center text-md-start">
+            
+            <!-- Column 1: Logo & Name -->
+            <div class="col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
+                <img src="images/logo.jpg" alt="Barangay Kalawaan Logo" class="mb-3" style="width: 80px; height: 80px; border-radius: 50%;">
+                <h5 class="fw-bold">Barangay Kalawaan</h5>
+                <p class="small mb-0">Pasig City, Metro Manila</p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-3">Quick Links</h6>
+                <ul class="list-unstyled">
+                <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                <li><a href="news.html" class="text-white text-decoration-none">News</a></li>
+                <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div class="col-md-4">
+                <h6 class="fw-bold mb-3">Contact Us</h6>
+                <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Kalawaan, Pasig City</p>
+                <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i> (02) 8643-1111</p>
+                <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i> barangaykalawaan@gmail.com</p>
+                <div class="mt-2">
+                <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+            </div>
+
+            <hr class="my-4 text-secondary">
+
+            <div class="text-center small text-white">
+            © 2025 Barangay Kalawaan, Pasig City. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="newsData.js"></script>
+    <script>
+    const yearSelect = document.getElementById('yearSelect');
+    const monthAccordion = document.getElementById('monthAccordion');
+    const newsContent = document.getElementById('newsContent');
+
+    function renderNews(year) {
+      const months = newsData[year];
+      if (!months) {
+        monthAccordion.innerHTML = `<p class="text-muted">No news available for ${year}.</p>`;
+        return;
+      }
+
+      monthAccordion.innerHTML = Object.entries(months)
+        .map(([month, items], index) => `
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button ${index > 0 ? 'collapsed' : ''}" 
+                      type="button" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#${month}-collapse">
+                ${month}
+              </button>
+            </h2>
+            <div id="${month}-collapse" 
+                class="accordion-collapse collapse ${index === 0 ? 'show' : ''}" 
+                data-bs-parent="#monthAccordion">
+              <div class="accordion-body">
+                <ul class="list-unstyled mb-0">
+                  ${items.map(item => `
+                    <li>
+                      <a href="#" class="news-item d-block py-1" 
+                        data-title="${item.title}" 
+                        data-date="${item.date}" 
+                        data-content="${item.content}" 
+                        data-image="${item.image}">
+                        ${item.title} (${item.date})
+                      </a>
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+            </div>
+          </div>
+        `).join('');
+
+      document.querySelectorAll('.news-item').forEach(item => {
+        item.addEventListener('click', e => {
+          e.preventDefault();
+          const title = item.getAttribute('data-title');
+          const date = item.getAttribute('data-date');
+          const content = item.getAttribute('data-content');
+          const image = item.getAttribute('data-image');
+
+          newsContent.innerHTML = `
+            <h3 class="fw-bold">${title}</h3>
+            <p class="text-muted">${date}</p>
+            <div class="text-center mb-3">
+              <img src="${image}" alt="${title}" class="img-fluid rounded shadow-sm" style="max-height: 50vh; width: 100%; object-fit: cover;">
+            </div>
+            <hr>
+            <p>${content}</p>
+          `;
+        });
+      });
+    }
+
+    // Initial render
+    renderNews(yearSelect.value);
+
+    // Handle year change
+    yearSelect.addEventListener('change', e => {
+      renderNews(e.target.value);
+    });
+    </script>
+
+    <!-- Contact Us Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title fw-bold" id="contactModalLabel">Contact Barangay Kalawaan</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label fw-semibold">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label fw-semibold">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="Subject" class="form-label fw-semibold">Subject</label>
+                    <input type="text" class="form-control" id="Subject" placeholder="Enter your subject" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label fw-semibold">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Type your message..." required></textarea>
+                </div>
+                <div class="text-end">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+                </form>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

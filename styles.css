@@ -1,0 +1,256 @@
+.navlink a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1vw;
+    margin: 0 1vw;
+}
+
+.navbar .container img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+}
+
+.navbar .container-fluid h1{
+    font-size: 2vw;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.search-container {
+  width: 30vw;
+  min-width: 250px;
+}
+
+.hero {
+    background: url('images/city.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    height: 90vh;
+    margin-top: 80px;
+    animation: hero 5s infinite;
+}
+
+.hero h1{
+    font-size: 90px;
+    font-weight: bold;
+}
+
+@keyframes hero {
+    0%, 100% {
+        background-position-y: 0;
+    }
+    50% {
+        background-position-y: -30px; /* adjust height of float */
+    }
+}
+
+.body h1 {
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+
+.events {
+    padding-top: 6vh;
+
+}
+
+.events .container {
+    background: gray;
+    height: 40vh; 
+    width: 30%;
+    position: relative;
+    padding: 0;
+}
+
+.events .container button {
+    position: absolute;
+    bottom: 0;
+    display: none;
+}
+
+.events .container h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.events .container:hover h3 {
+    bottom: 17%;
+    transition: 0.5s;
+}
+
+.events .container:hover button {
+    display: block;
+    background: transparent;
+    height: 17%;
+    color: white;
+    border: none;
+    width: 100%;
+    background-color: rgba(34, 123, 206, 1);
+}
+
+.services .container {
+    width: 23%;
+    background: white;
+    height: 14vw;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    border-bottom: 5px solid rgba(34, 123, 206, 1);
+    margin-top: 2vh;
+}
+
+.services a {
+    color: black;
+    text-decoration: none;
+
+}
+
+.services .container:hover {
+    background: rgba(34, 123, 206, 1);;
+    transition: 0.3s ;
+    color: white;
+}
+
+.services .container:hover a{
+    color: white;
+}
+
+.view {
+    font-size: 15px;
+    color: white;
+}
+
+/* Navbar adjustments */
+@media (max-width: 948px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto !important;
+    padding: 10px;
+  }
+
+  .news {
+    display: none;
+  }
+
+  .navbar .container img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin-top: 0;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+  }
+
+  .search-container {
+    width: 90% !important; /* expand to 90% on mobile */
+    min-width: unset;
+  }
+
+  .navbar .container {
+    width: 100% !important;
+    justify-content: center !important;
+    margin-bottom: 10px;
+  }
+
+  .navbar img {
+    height: 60px !important;
+    width: 60px !important;
+    margin: 0 10px;
+  }
+
+  .navbar .container-fluid h1 {
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  .navlink a {
+    font-size: 16px;
+    margin: 2vh 3.5vw 0;
+  }
+
+  .navbar form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar .container form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar input {
+    width: 85% !important;
+  }
+}
+
+/* Hero Section */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh !important;
+    animation: none;
+    background-position: center;
+  }
+
+  .hero h1 {
+    font-size: 30px !important;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 40px !important;
+  }
+}
+
+/* Events Section */
+@media (max-width: 800px) {
+  .events {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .events .container {
+    width: 45% !important; /* 2 per row */
+    margin: 10px 5px;
+  }
+}
+
+/* Services Section */
+@media (max-width: 918px) {
+  .services {
+    justify-content: center;
+  }
+
+  .services .container {
+    width: 40vw !important;
+    height: 40vw !important;
+    font-size: 20px !important;
+    margin: 10px;
+    border-radius: 10px;
+    border-bottom: none;
+  }
+
+  .view {
+    display: none;
+  }
+}
