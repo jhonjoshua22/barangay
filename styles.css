@@ -152,7 +152,7 @@
   }
 
   h3 {
-    font-size: 0.8rem !important;
+    font-size: 0.6rem !important;
     padding: 0 !important;
   }
 }
@@ -324,4 +324,5 @@
     border-radius: 10px;
     border-bottom: none;
   }
+
 }
