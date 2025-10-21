@@ -318,11 +318,12 @@
 
   .services .container {
     width: 25vw !important;
-    height: 30vw !important;
+    height: auto !important;
     font-size: 20px !important;
-    margin: 0 5px;
+    margin: 25px 5px;
     border-radius: 10px;
     border-bottom: none;
   }
 
 }
+
