@@ -1,0 +1,273 @@
+.navlink a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1vw;
+    margin: 0 1vw;
+}
+
+.navbar .container img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+}
+
+.navbar .container-fluid h1{
+    font-size: 2vw;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar, 
+.navbar-collapse {
+  background-color: white !important;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar-toggler {
+  z-index: 1100;
+}
+
+.navbar.fixed-top {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.hero-about {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Add blurred background separately */
+.hero-about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('images/kalawaan.jpg') center/cover no-repeat;
+  filter: blur(8px) brightness(0.4);
+  z-index: 0;
+}
+
+/* Make sure text stays sharp */
+.hero-about * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero-about h1 {
+    font-size: 3rem;
+    font-weight: 800;
+} 
+
+.hero-about p {
+    max-width: 800px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+} 
+
+.search-container {
+  width: 30vw;
+  min-width: 250px;
+}
+
+.services {
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  background: #fff;
+}
+
+/* Sidebar buttons */
+.services button {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(34, 123, 206, 1);
+  margin: 5px 0;
+  background: white;
+  padding: 10px;
+}
+
+.services button:hover {
+  background: rgba(34, 123, 206, 1);
+  transition: 0.3s;
+  color: white;
+}
+
+/* Service item boxes */
+.s-item {
+  width: 30%;
+  margin: 10px;
+  padding: 20px;
+  background: #f2f2f2;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.s-item:hover {
+  transform: scale(1.03);
+  background: #e8f0ff;
+}
+
+.category-btn {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.category-btn:hover {
+  background: #cfe3ff;
+}
+
+.category-btn.active {
+  background: #007bff;
+  color: white;
+}
+
+/* Buttons inside service items */
+.s-item button {
+  width: 40%;
+  height: 40px;
+  padding: 0;
+  color: white;
+  background: rgb(50, 50, 50);
+  margin: 15px 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Images inside items */
+.service-items img {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ✅ Important Fix: Align items to the top */
+.service-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start; /* ensures items start from the top */
+  justify-content: flex-start;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 992px) {
+  .sidebar {
+    width: 100% !important;
+    position: relative;
+    top: 0;
+    text-align: center;
+    padding: 20px 0 !important;
+  }
+
+  .service-items {
+    width: 100% !important;
+    justify-content: center;
+    padding: 20px !important;
+    align-content: flex-start; /* still start from top on mobile */
+  }
+
+  .s-item {
+    width: 100%;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .s-item {
+    width: 45%;
+  }
+}
+
+
+/* Navbar adjustments */
+@media (max-width: 948px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .news {
+    display: none;
+  }
+
+  .navbar .container img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin-top: 0;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+  }
+
+  .search-container {
+    width: 90% !important; /* expand to 90% on mobile */
+    min-width: unset;
+  }
+
+  .navbar .container {
+    width: 100% !important;
+    justify-content: center !important;
+    margin-bottom: 10px;
+  }
+
+  .navbar img {
+    height: 60px !important;
+    width: 60px !important;
+    margin: 0 10px;
+  }
+
+  .navbar .container-fluid h1 {
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  .navlink {
+    padding: 5vh;
+  }
+
+  .navlink a {
+    font-size: 16px;
+    margin: 2vh 3.5vw 0;
+  }
+
+  .navbar form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar .container form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar input {
+    width: 85% !important;
+  }
+}
