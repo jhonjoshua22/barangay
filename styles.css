@@ -325,5 +325,10 @@
     border-bottom: none;
   }
 
+  .services a{
+    font-size: 0.7rem;
+  }
+
 }
+
 
