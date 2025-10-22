@@ -125,11 +125,6 @@
   color: white;
 }
 
-.category-btn.active {
-  background-color: rgb(207, 5, 5) !important;
-  color: white !important;
-}
-
 .category-btn {
   display: block;
   margin-bottom: 10px;
@@ -139,10 +134,16 @@
   background: #eee;
   cursor: pointer;
   transition: 0.2s;
+  font-size: 1rem;
 }
 
 .category-btn:hover {
   background: #cfe3ff;
+}
+
+.category-btn.active {
+  background-color: rgb(207, 5, 5) !important;
+  color: white !important;
 }
 
 .s-item {
@@ -320,6 +321,10 @@
 
   .hero-about h1{
     font-size: 1rem;
+  }
+
+  .category-btn {
+    font-size: 0.8rem;
   }
 
   .achievements {
