@@ -42,10 +42,26 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll-text 25s linear infinite;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 .hero-about {
+  margin-top: 95px;
   position: relative;
-  height: 60vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +72,6 @@
   overflow: hidden;
 }
 
-/* Add blurred background separately */
 .hero-about::before {
   content: "";
   position: absolute;
@@ -66,16 +81,13 @@
   z-index: 0;
 }
 
-/* Make sure text stays sharp */
 .hero-about * {
   position: relative;
   z-index: 1;
 }
 
-
 .hero-about h1 {
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 2rem;
 } 
 
 .hero-about p {
@@ -97,14 +109,14 @@
   background: #fff;
 }
 
-/* Sidebar buttons */
 .services button {
   width: 100%;
-  border-radius: 10px;
-  border: 1px solid rgba(34, 123, 206, 1);
+  min-width: 100px;
   margin: 5px 0;
-  background: white;
+  background: rgba(34, 123, 206, 1);
   padding: 10px;
+  color: white;
+  font-weight: bold;
 }
 
 .services button:hover {
@@ -113,20 +125,9 @@
   color: white;
 }
 
-/* Service item boxes */
-.s-item {
-  width: 30%;
-  margin: 10px;
-  padding: 20px;
-  background: #f2f2f2;
-  border-radius: 10px;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.s-item:hover {
-  transform: scale(1.03);
-  background: #e8f0ff;
+.category-btn.active {
+  background-color: rgb(207, 5, 5) !important;
+  color: white !important;
 }
 
 .category-btn {
@@ -137,7 +138,6 @@
   border: none;
   background: #eee;
   cursor: pointer;
-  border-radius: 8px;
   transition: 0.2s;
 }
 
@@ -145,31 +145,39 @@
   background: #cfe3ff;
 }
 
-.category-btn.active {
-  background: #007bff;
-  color: white;
+.s-item {
+  width: 30%;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
 }
 
-/* Buttons inside service items */
+.s-item button:hover{
+  background-color: rgb(207, 5, 5) !important;
+}
+
+.s-item:hover {
+  transform: scale(1.03);
+  background: #e8f0ff;
+}
+
 .s-item button {
   width: 40%;
   height: 40px;
   padding: 0;
   color: white;
-  background: rgb(50, 50, 50);
+  background: rgba(34, 123, 206, 1);
   margin: 15px 10px;
   border: none;
   border-radius: 8px;
 }
 
-/* Images inside items */
 .service-items img {
   width: 90%;
-  height: auto;
-  border-radius: 10px;
+  height: 70%;
 }
 
-/* ✅ Important Fix: Align items to the top */
 .service-items {
   display: flex;
   flex-wrap: wrap;
@@ -177,7 +185,6 @@
   justify-content: flex-start;
 }
 
-/* ✅ Responsive Adjustments */
 @media (max-width: 992px) {
   .sidebar {
     width: 100% !important;
@@ -205,6 +212,42 @@
   }
 }
 
+.achievements {
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+.achievements h2{
+  font-size: 2.5rem;
+  width: 60%;
+  color: white;
+  font-weight: bold;
+  margin-right: 5%;
+  margin-top: 17%;
+}
+
+.achievements .container{
+  height: 50%;
+  background: white;
+  border: 1px solid rgba(1, 1, 1, 0.1);
+  width: 50%;
+}
+
+.achievements-item{
+  border-top: 8px solid #dc3545;
+  border-left: 6px solid #dc3545;
+  height: 55%;
+  right: -15%;
+  bottom: 0;
+  position: absolute;
+  width: 80%;
+}
+
+.a-image {
+  height: 100%;
+  width: 50%;
+}
 
 /* Navbar adjustments */
 @media (max-width: 948px) {
@@ -270,4 +313,37 @@
   .navbar input {
     width: 85% !important;
   }
+
+  .hero-about {
+    height: 20vh;
+  }
+
+  .hero-about h1{
+    font-size: 1rem;
+  }
+
+  .achievements {
+    width: 100%;
+  }
+
+  .achievements h2{
+    font-size: 1.9rem;
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+    margin-top: 20%;
+  }
+
+  .achievements-item{
+    height: 55%;
+    right: 10%;
+    bottom: 0;
+    position: absolute;
+    width: 80%;
+  }
+  
+  .a-image {
+    width: 0%;
+  }
+
 }
