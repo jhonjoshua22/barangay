@@ -93,14 +93,23 @@
     width: 50%;
 }
 
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* consistent spacing */
+  padding: 6vh 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .events .container {
   height: 40vh; 
   width: 30%;
-  position: relative;
   padding: 0;
   overflow: hidden;
-  text-align: center;
   background: white;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -108,37 +117,40 @@
 
 .events .container img {
   width: 100%;
-  height: 60%;
+  height: 55%;
   object-fit: cover;
 }
 
-.events .container h3 {
-  position: absolute;
-  bottom: 17%;
-  left: 0;
-  padding: 15px;
+/* Event text and button styling */
+.events .container h3, i {
+  padding: 15px 5% 0;
   background: transparent;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
-.events .container button {
+h4 {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  display: block;
-  background: rgb(34, 123, 206);
-  height: 17%;
-  color: white;
-  border: none;
-  width: 100%;
-  font-weight: 600;
-  border-radius: 0;
+  background: #dc3545;
+  padding: 2% 3% !important;
+  left: 9%;
+  bottom: 50%;
+  color: white !important;
+  font-size: 1rem !important;
+  text-align: center;
 }
 
-.events .container:hover button {
-  background: rgb(224, 3, 22);
-  transition: 0.3s;
+.events .container:hover h4{
+  left: 0;
+  transition: 0.7s;
+}
+
+i {
+  font-size: 0.93rem;
+}
+
+h3:hover {
+  color: #dc3545
 }
 
 @media (max-width: 910px) {
@@ -151,6 +163,27 @@
   h3 {
     font-size: 0.6rem !important;
     padding: 0 !important;
+  }
+}
+
+@media (max-width: 910px) {
+  .events .container {
+    width: 47%;
+    height: 25vh;
+    margin: 0;
+  }
+
+  i {
+    font-size: 0.6rem;
+  }
+
+  h3 {
+    font-size: 0.8rem !important;
+    padding: 2% 5%!important;
+  }
+
+  h4 {
+    font-size: 0.7rem;
   }
 }
 

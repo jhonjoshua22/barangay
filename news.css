@@ -1,6 +1,3 @@
-
-
-
 .navlink a{
     text-decoration: none;
     color: black;
@@ -30,7 +27,6 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* Keep navbar and expanded mobile menu visible */
 .navbar, 
 .navbar-collapse {
   background-color: white !important;
@@ -38,25 +34,39 @@
   z-index: 1000;
 }
 
-/* Make sure the navbar-toggler (hamburger) stays visible */
 .navbar-toggler {
   z-index: 1100;
 }
 
-/* Optional: add shadow for better visibility when scrolled */
 .navbar.fixed-top {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 
 .search-container {
   width: 30vw;
   min-width: 250px;
 }
 
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll-text 25s linear infinite;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .hero-about {
+  margin-top: 95px;
   position: relative;
-  height: 60vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,7 +77,6 @@
   overflow: hidden;
 }
 
-/* Add blurred background separately */
 .hero-about::before {
   content: "";
   position: absolute;
@@ -77,16 +86,13 @@
   z-index: 0;
 }
 
-/* Make sure text stays sharp */
 .hero-about * {
   position: relative;
   z-index: 1;
 }
 
-
 .hero-about h1 {
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 2rem;
 } 
 
 .hero-about p {
@@ -95,12 +101,6 @@
     margin-top: 20px;
 } 
 
-/* Prevent horizontal scroll on all devices */
-html, body {
-  overflow-x: hidden;
-}
-
-/* EVENTS SECTION */
 .events {
   display: flex;
   flex-wrap: wrap;
@@ -114,57 +114,57 @@ html, body {
 .events .container {
   height: 40vh; 
   width: 30%;
-  position: relative;
   padding: 0;
-  border: 1px solid gray;
-  border-radius: 10px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-/* Ensure images fit nicely */
 .events .container img {
   width: 100%;
-  height: 60%;
+  height: 55%;
   object-fit: cover;
 }
 
 /* Event text and button styling */
-.events .container h3 {
-  position: absolute;
-  bottom: 17%;
-  left: 0;
-  padding: 15px;
+.events .container h3, i {
+  padding: 15px 5% 0;
   background: transparent;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
-.events .container button {
+h4 {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  display: block;
-  background: rgb(34, 123, 206);
-  height: 17%;
+  background: #dc3545;
+  padding: 2% 3%;
+  left: 9%;
+  bottom: 50%;
   color: white;
-  border: none;
-  width: 100%;
-  font-weight: 600;
-  border-radius: 0;
+  font-size: 1rem;;
+  text-align: center;
 }
 
-.events .container:hover button {
-  background: rgb(224, 3, 22);
-  transition: 0.3s;
+.events .container:hover h4{
+  left: 0;
+  transition: 0.7s;
+}
+
+i {
+  font-size: 0.93rem;
+}
+
+h3:hover {
+  color: #dc3545
 }
 
 .e-buttons {
-  padding: 5px 15px;
+  width: 45px;
+  height: 45px;
+  margin: 0 2px;
   background-color: rgb(34, 123, 206);
   border: none;
   color: white;
@@ -174,13 +174,21 @@ html, body {
 @media (max-width: 910px) {
   .events .container {
     width: 47%;
-    height: 35vh;
+    height: 25vh;
     margin: 0;
+  }
+
+  i {
+    font-size: 0.6rem;
   }
 
   h3 {
     font-size: 0.8rem !important;
-    padding: 0 !important;
+    padding: 2% 5%!important;
+  }
+
+  h4 {
+    font-size: 0.7rem;
   }
 }
 
@@ -247,5 +255,13 @@ html, body {
 
   .news {
     display: none;
+  }
+
+  .hero-about {
+    height: 20vh;
+  }
+
+  .hero-about h1{
+    font-size: 1rem;
   }
 }
