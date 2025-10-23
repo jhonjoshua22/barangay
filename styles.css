@@ -169,7 +169,7 @@ h3:hover {
 @media (max-width: 910px) {
   .events .container {
     width: 47%;
-    height: 25vh;
+    height: auto;
     margin: 0;
   }
 
