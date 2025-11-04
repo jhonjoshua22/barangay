@@ -199,13 +199,13 @@ h3:hover {
     padding: 10px;
   }
 
-  .navbar .container img {
+  .navbar .container-fluid img {
     height: 90px;
     width: 90px;
     border-radius: 50%;
     margin-top: 0;
-    margin-left: 1.5vw;
-    margin-right: 1.5vw;
+    margin-left: 0;
+    margin-right: 0 !important;
   }
 
   .search-container {
@@ -266,4 +266,5 @@ h3:hover {
   }
 
 }
+
 
