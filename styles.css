@@ -125,7 +125,7 @@
 .events .container h3, i {
   padding: 15px 5% 0;
   background: transparent;
-  font-size: 1.3rem;
+  font-size: 2.5vh;
   font-weight: bold;
 }
 
@@ -357,3 +357,4 @@ h3:hover {
     font-size: 0.8rem;
   }
 }
+
