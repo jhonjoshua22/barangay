@@ -264,8 +264,8 @@ h3:hover {
     width: 90px;
     border-radius: 50%;
     margin-top: 0;
-    margin-left: 1.5vw;
-    margin-right: 1.5vw;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .search-container {
@@ -357,4 +357,5 @@ h3:hover {
     font-size: 0.8rem;
   }
 }
+
 
