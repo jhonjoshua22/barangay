@@ -27,6 +27,7 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+/* Keep navbar and expanded mobile menu visible */
 .navbar, 
 .navbar-collapse {
   background-color: white !important;
@@ -34,14 +35,15 @@
   z-index: 1000;
 }
 
+/* Make sure the navbar-toggler (hamburger) stays visible */
 .navbar-toggler {
   z-index: 1100;
 }
 
+/* Optional: add shadow for better visibility when scrolled */
 .navbar.fixed-top {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 
 .search-container {
   width: 30vw;
@@ -63,6 +65,7 @@
     transform: translateX(-100%);
   }
 }
+
 
 .hero {
     background: url('images/city.jpg');
@@ -254,8 +257,6 @@ h3:hover {
 @media (max-width: 948px) {
   .navbar {
     flex-wrap: wrap;
-    height: auto;
-    background-color: white !important;
     padding: 10px;
   }
 
@@ -264,8 +265,8 @@ h3:hover {
     width: 90px;
     border-radius: 50%;
     margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
   }
 
   .search-container {
@@ -292,7 +293,6 @@ h3:hover {
 
   .navlink {
     padding-bottom: 5vh;
-    width: 100%;
   }
 
   .navlink a {
@@ -357,5 +357,3 @@ h3:hover {
     font-size: 0.8rem;
   }
 }
-
-

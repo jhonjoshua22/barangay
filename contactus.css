@@ -103,8 +103,10 @@
 
 .contactus {
     height: auto;
-    margin: 5% 0;
+    margin: 5% auto; /* Center horizontally */
+    justify-content: center; /* Center flex children */
 }
+
 
 .contactus p, .contactus span {
     color: rgb(80, 80, 80);
