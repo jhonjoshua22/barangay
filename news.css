@@ -173,6 +173,12 @@ h3:hover {
   color: white;
 }
 
+.e-buttons.active {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+
 /* Tablet view: 2 per row */
 @media (max-width: 910px) {
   .events .container {
