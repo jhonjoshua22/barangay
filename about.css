@@ -166,6 +166,14 @@
     padding: 0 !important;
   }
 
+  .vision-mission {
+    height: auto;
+  }
+
+  .vision, .mission, .captain{
+    width: 100%;
+} 
+
   .navbar .container img {
     height: 90px;
     width: 90px;
