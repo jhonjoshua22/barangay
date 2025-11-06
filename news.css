@@ -6,13 +6,8 @@
     margin: 0 1vw;
 }
 
-.navbar .container img {
-    height: 90px;
-    width: 90px;
-    border-radius: 50%;
-    margin-top: 20px;
-    margin-left: 1.5vw;
-    margin-right: 1.5vw;
+.navbar {
+  padding: 0 10px !important;
 }
 
 .navbar .container-fluid h1{
@@ -205,32 +200,16 @@ h3:hover {
 @media (max-width: 948px) {
   .navbar {
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 0 !important;
   }
-
-  .news {
-    display: none;
-  }
-
-  .hero-about {
-    height: 20vh;
-  }
-
-  .hero-about h1{
-    font-size: 1rem;
-  }
-
-  .vision, .mission, .captain{
-    width: 100%;
-  } 
 
   .navbar .container img {
     height: 90px;
     width: 90px;
     border-radius: 50%;
     margin-top: 0;
-    margin-left: 1.5vw;
-    margin-right: 1.5vw;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .search-container {
@@ -252,7 +231,7 @@ h3:hover {
 
   .navbar .container-fluid h1 {
     font-size: 5vw;
-    text-align: center;
+    text-align: left !important;
   }
 
   .navlink {
