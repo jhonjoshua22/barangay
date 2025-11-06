@@ -116,12 +116,13 @@
 .vision-mission {
     display: flex;
     flex-wrap: wrap;
-    height: auto;
+    height: 40vh;
     margin-top: 80px;
 } 
 
 .vision, .mission, .captain{
     width: 33.33%;
+    height: 100%;
 } 
 
 .vision {
@@ -150,7 +151,6 @@
 }
 
 .scroll-container {
-  max-height: 100vh; 
   overflow-y: auto;
   padding: 10px;
   margin-bottom: 5vh;
@@ -158,6 +158,11 @@
 
 .scroll-container::-webkit-scrollbar {
   display: none; 
+}
+
+.maps {
+  width: 100%;
+  height: 40vh;
 }
 
 @media (max-width: 948px) {
@@ -186,6 +191,11 @@
   .hero-about h1{
     font-size: 1rem;
   }
+
+  .vision-mission {
+    height: auto;
+
+} 
 
   .vision, .mission, .captain{
     width: 100%;
