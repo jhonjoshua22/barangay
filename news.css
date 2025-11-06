@@ -1,3 +1,8 @@
+a[href^="tel"] {
+  color: white !important;
+  text-decoration: none !important;
+}
+
 .navlink a{
     text-decoration: none;
     color: black;
@@ -270,5 +275,6 @@ h3:hover {
   }
 
 }
+
 
 
