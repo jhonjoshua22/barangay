@@ -283,7 +283,7 @@ h3:hover {
 
   .navbar .container-fluid h1 {
     font-size: 5vw;
-    text-align: center;
+    text-align: left !important;
   }
 
   .navlink {
@@ -352,4 +352,5 @@ h3:hover {
     font-size: 0.8rem;
   }
 }
+
 
