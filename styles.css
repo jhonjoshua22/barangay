@@ -6,13 +6,8 @@
     margin: 0 1vw;
 }
 
-.navbar .container img {
-    height: 90px;
-    width: 90px;
-    border-radius: 50%;
-    margin-top: 20px;
-    margin-left: 1.5vw;
-    margin-right: 1.5vw;
+.navbar {
+  padding: 0 10px !important;
 }
 
 .navbar .container-fluid h1{
@@ -257,7 +252,7 @@ h3:hover {
 @media (max-width: 948px) {
   .navbar {
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 0 !important;
   }
 
   .navbar .container img {
@@ -265,7 +260,7 @@ h3:hover {
     width: 90px;
     border-radius: 50%;
     margin-top: 0;
-    margin-left: 0;
+    margin-left: 0 !important;
     margin-right: 0 !important;
   }
 
