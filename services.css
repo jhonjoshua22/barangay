@@ -6,13 +6,8 @@
     margin: 0 1vw;
 }
 
-.navbar .container img {
-    height: 90px;
-    width: 90px;
-    border-radius: 50%;
-    margin-top: 20px;
-    margin-left: 1.5vw;
-    margin-right: 1.5vw;
+.navbar {
+  padding: 0 10px !important;
 }
 
 .navbar .container-fluid h1{
@@ -27,6 +22,7 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+/* Keep navbar and expanded mobile menu visible */
 .navbar, 
 .navbar-collapse {
   background-color: white !important;
@@ -34,12 +30,19 @@
   z-index: 1000;
 }
 
+/* Make sure the navbar-toggler (hamburger) stays visible */
 .navbar-toggler {
   z-index: 1100;
 }
 
+/* Optional: add shadow for better visibility when scrolled */
 .navbar.fixed-top {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  width: 30vw;
+  min-width: 250px;
 }
 
 .scrolling-text {
@@ -254,11 +257,7 @@
 @media (max-width: 948px) {
   .navbar {
     flex-wrap: wrap;
-    padding: 10px;
-  }
-
-  .news {
-    display: none;
+    padding: 0 !important;
   }
 
   .navbar .container img {
@@ -266,8 +265,8 @@
     width: 90px;
     border-radius: 50%;
     margin-top: 0;
-    margin-left: 1.5vw;
-    margin-right: 1.5vw;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .search-container {
@@ -289,11 +288,11 @@
 
   .navbar .container-fluid h1 {
     font-size: 5vw;
-    text-align: center;
+    text-align: left !important;
   }
 
   .navlink {
-    padding: 5vh;
+    padding-bottom: 5vh;
   }
 
   .navlink a {
