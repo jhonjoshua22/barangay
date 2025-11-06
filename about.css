@@ -1,3 +1,8 @@
+a[href^="tel"] {
+  color: white !important;
+  text-decoration: none !important;
+}
+
 .navlink a{
     text-decoration: none;
     color: black;
@@ -227,5 +232,6 @@
   .navbar input {
     width: 85% !important;
   }
+
 
 }
