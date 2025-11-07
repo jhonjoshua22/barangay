@@ -1,3 +1,8 @@
+a[href^="tel"] {
+  color: white !important;
+  text-decoration: none !important;
+}
+
 .navlink a{
     text-decoration: none;
     color: black;
@@ -355,5 +360,6 @@ i {
   .a-image {
     width: 0%;
   }
+
 
 }
