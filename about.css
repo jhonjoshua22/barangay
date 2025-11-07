@@ -1,8 +1,3 @@
-a[href^="tel"] {
-  color: white !important;
-  text-decoration: none !important;
-}
-
 .navlink a{
     text-decoration: none;
     color: black;
@@ -165,6 +160,10 @@ a[href^="tel"] {
   height: 40vh;
 }
 
+i {
+  padding: 0 5%;
+}
+
 @media (max-width: 948px) {
   .navbar {
     flex-wrap: wrap;
@@ -232,6 +231,5 @@ a[href^="tel"] {
   .navbar input {
     width: 85% !important;
   }
-
 
 }

@@ -1,8 +1,3 @@
-a[href^="tel"] {
-  color: white !important;
-  text-decoration: none !important;
-}
-
 .navlink a{
     text-decoration: none;
     color: black;
@@ -258,6 +253,10 @@ a[href^="tel"] {
   width: 50%;
 }
 
+i {
+  padding: 0 5%;
+}
+
 /* Navbar adjustments */
 @media (max-width: 948px) {
   .navbar {
@@ -356,6 +355,5 @@ a[href^="tel"] {
   .a-image {
     width: 0%;
   }
-
 
 }
